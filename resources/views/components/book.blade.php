@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="w-full aspect-[4/6]">
-                <img class="w-full h-full object-cover rounded-lg shadow-lg shadow-black/50" src="{{ $thumbnail }}"
+                <img class="w-full h-full object-cover rounded-lg shadow-lg shadow-black/50" src="{{ asset('storage/' . $thumbnail  ) }}"
                     alt="{{ $title }}" />
             </div>
         </div>

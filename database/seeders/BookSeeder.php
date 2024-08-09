@@ -15,8 +15,9 @@ class BookSeeder extends Seeder
         for($i = 0; $i < 50; $i++) {
             $book = [
                 'title' => fake()->sentence(5),
-                'author' => rand(1, 5),
-                'publishing_company' => rand(1, 5),
+                'author_id' => rand(1, 5),
+                'publishing_company_id' => rand(1, 4),
+                'category_id' => rand(1, 5),
                 'publish_date' => now(),
                 'price' => rand(10000, 100000),
                 'tag' => 'Yêu thích',

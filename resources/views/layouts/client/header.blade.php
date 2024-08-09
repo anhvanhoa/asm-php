@@ -23,9 +23,31 @@
                 <span class="p-2 hover:bg-white rounded-lg">
                     <i class="size-5" data-lucide="shopping-cart"></i>
                 </span>
-                <span class="p-2 hover:bg-white rounded-lg">
+                @auth
+                    <div class="relative z-10 group">
+                        <span class="block p-2 hover:bg-white rounded-lg">
+                            <i class="size-5" data-lucide="user"></i>
+                        </span>
+                        <div class="hidden group-hover:block pt-2 top-full absolute">
+                            <div class="bg-white p-2 rounded-md text-sm">
+                                @if (auth()->user()->role == 'admin')
+                                    <a href="{{ route('admin.dashboard') }}"
+                                        class="p-2 rounded-lg text-gray-900 hover:text-primary">
+                                        Admin</a>
+                                @endif
+                                <a href="{{ route('logout') }}" class="p-2 rounded-lg text-gray-900 hover:text-primary">
+                                    Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                @else
+                    <a href="{{ route('login') }}" class="p-2 hover:bg-white rounded-lg text-gray-900 hover:text-primary">
+                        <i class="size-5" data-lucide="log-in"></i></a>
+                @endauth
+
+                {{-- <span class="p-2 hover:bg-white rounded-lg">
                     <i class="size-5" data-lucide="user"></i>
-                </span>
+                </span> --}}
             </div>
         </div>
     </header>

@@ -9,4 +9,14 @@ class PublishingCompany extends Model
 {
     use HasFactory;
     protected $table = 'publishing_companies';
+
+    protected $fillable = [
+        'name',
+        'phone',
+        'address',
+        'logo',
+        'website',
+        'email',
+        'description',
+    ];
 }

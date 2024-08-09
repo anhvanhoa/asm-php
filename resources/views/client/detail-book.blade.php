@@ -47,19 +47,19 @@
                             <tbody>
                                 <tr>
                                     <td scope="row" class="max-w-40 font-medium">Nhà xuất bản</td>
-                                    <td class="px-3 py-2">{{ $book->publishing_company_name }}</td>
+                                    <td class="px-3 py-2">{{ $book->publishing_company->name }}</td>
                                 </tr>
                                 <tr>
                                     <td scope="row" class="max-w-40 font-medium">Tác giả</td>
                                     <td class="px-3 py-2">
-                                        <a href="{{route('author-book', $book->author)}}" class="text-blue-500">
-                                            {{ $book->author_name }}
+                                        <a href="{{route('author-book', $book->author->id)}}" class="text-blue-500">
+                                            {{ $book->author->name }}
                                         </a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td scope="row" class="max-w-40 font-medium">Thể loại</td>
-                                    <td class="px-3 py-2">{{ $book->category_name }}</td>
+                                    <td class="px-3 py-2">{{ $book->category->name }}</td>
                                 </tr>
                                 <tr>
                                     <td scope="row" class="max-w-40 font-medium">Ngày xuất bản</td>
